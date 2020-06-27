@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE configuration
+        PUBLIC "-//mybatis.org//DTD Config 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-config.dtd">
+<configuration>
+    <!--又叫SqlMappingConfig.xml-->
+    <!--配置别名-->
+    <typeAliases>
+        <!-- 批量配置别名：指定批量定义别名的类包，别名为类名（首字母大小写都可） -->
+        <package name="edu.xidian.appoint.model"></package>
+    </typeAliases>
+
+    <!--告诉mybatis加载映射文件-->
+    <mappers>
+        <!-- 批量加载映射文件 -->
+        <package name="edu.xidian.appoint.mapper"></package>
+
+    </mappers>
+    <!-- 配置全局属性 -->
+
+</configuration>
