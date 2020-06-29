@@ -23,7 +23,8 @@
                     <th>图书名称</th>
                     <th>图书介绍</th>
                     <th>馆藏数量</th>
-                    <th>借阅图书</th>
+                    <th>预约数量</th>
+                    <%--<th>借阅图书</th>--%>
                 </tr>
                 </thead>
                 <tbody>
@@ -32,12 +33,28 @@
                         <td>${book.name}</td>
                         <td>${book.introd}</td>
                         <td>${book.number}</td>
-                        <td>
+                        <td>1</td>
+                        <%--<td>
                             <a href="${pageContext.request.contextPath}/books/borrow.do?id=${book.bookId}">借阅</a>
-                        </td>
+                        </td>--%>
                     </tr>
                 </tbody>
             </table>
+        </div>
+        <div class="panel-body text-center">
+            <h2 class="text-danger">
+                <!--用来展示预约控件-->
+                <span class="glyphicon"  >
+                    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/books/list.do">返回上一级</a>
+                </span> <!--在js里面调用这个id还可以动态显示一些其他东西，例如动态时间等（需要插件）-->
+                <span class="glyphicon" id="appoint-box" >
+                    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/books/borrow.do?id=${book.bookId}">预约</a>
+                </span> <!--在js里面调用这个id还可以动态显示一些其他东西，例如动态时间等（需要插件）-->
+
+                <span class="glyphicon">
+                    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/books/appoint.do" target="_blank">查看已预约书籍</a>
+                </span>
+            </h2>           <!--如何获取该页面弹出层输入的学生ID， 传给上面的url-->
         </div>
     </div>
 </div>

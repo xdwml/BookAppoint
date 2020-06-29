@@ -31,7 +31,7 @@
             <div style="background-color: darkseagreen;padding: 28px">
                 <form id="loginFrom" action="${pageContext.request.contextPath}/login.do" method="post">
                     <div style="height: 80px;">
-                        <h3 style="text-align: center;color: darkolivegreen; font-size: 35px;">登录中心</h3>
+                        <h3 style="text-align: center;color: darkolivegreen; font-size: 35px;">欢迎登录</h3>
                     </div>
                     <label>学号</label>
                     <div  class="form-group">

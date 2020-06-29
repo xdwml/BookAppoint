@@ -23,15 +23,12 @@
                 <table class="table table-bookName">
                     <thead>
                     <tr>
-                        <th width="150" align="lift" colspan="3">请输入您要查询的图书名称：</th>
-                        <th width="150" align="lift">
+                        <th width="180" align="lift" colspan="3">请输入您要查询的图书名称：</th>
+                        <th width="180" align="lift">
                             <input type="text" name="name" class="allInput" value="${name}" placeholder="输入检索书名^o^" />
                         </th>
                         <th>
                             <input type="submit" id="tabSub" value="检索" />
-                        </th>
-                        <th>
-                            <a href="${pageContext.request.contextPath}/books/appoint.do">我的借阅</a>
                         </th>
                         <%
                             //1.获取所有Cookie
@@ -56,6 +53,9 @@
                             }
                             %>
                         <th>
+                            <a href="${pageContext.request.contextPath}/books/appoint.do">我的预约</a>
+                        </th>
+                        <th>
                             <a href="${pageContext.request.contextPath}/books/exit.do">退出</a>
                         </th>
                     </tr>
@@ -70,7 +70,7 @@
                     <th>编号</th>
                     <th>图书名称</th>
                     <th>馆藏数量</th>
-                    <th colspan="2">操作</th>
+                    <th colspan="2">预约管理</th>
                 </tr>
                 </thead>
                 <tbody>
@@ -80,8 +80,8 @@
                         <td>${books.name}</td>
                         <td>${books.number}</td>
                         <td>
-                            <a href="${pageContext.request.contextPath}/books/detail.do?id=${books.bookId}">详细</a><%--访问控制器中的方法--%>
-                            &nbsp;<a href="${pageContext.request.contextPath}/books/borrow.do?id=${books.bookId}">借阅</a>
+                            <a href="${pageContext.request.contextPath}/books/detail.do?id=${books.bookId}" target="_blank">详情</a><%--访问控制器中的方法--%>
+                            &nbsp;<a href="${pageContext.request.contextPath}/books/borrow.do?id=${books.bookId}" target="_blank" >预约</a>
                             <%--管理员操作权限--%>
                             <%--&nbsp;<a href="${pageContext.request.contextPath}/books/delete.do?id=${books.bookId}">删除</a>&lt;%&ndash;访问控制器中的方法&ndash;%&gt;
                             &nbsp;<a href="${pageContext.request.contextPath}/books/edit.do?id=${books.bookId}">编辑</a>&lt;%&ndash;访问控制器中的方法&ndash;%&gt;--%>

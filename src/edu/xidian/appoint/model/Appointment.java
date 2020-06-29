@@ -1,14 +1,8 @@
 package edu.xidian.appoint.model;
-
-import edu.xidian.appoint.web.interceptor.LoginInterceptor;
-
 import java.util.Date;
-
 public class Appointment extends AppointmentKey {
-
     private Long bookId;
     private Long studentId;
-
     private Date appointTime;
     //多对一的符合
     private Book book;
