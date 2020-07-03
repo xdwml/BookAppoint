@@ -4,6 +4,10 @@
            xsi:schemaLocation="http://java.sun.com/xml/ns/javaee
 		  http://java.sun.com/xml/ns/javaee/web-app_2_5.xsd"
            version="2.5">
+    <!--设置web启动首页面-->
+    <welcome-file-list>
+        <welcome-file>/WEB-INF/views/login.jsp</welcome-file>
+    </welcome-file-list>
     <!-- 配置spring-->
     <context-param>
         <param-name>contextConfigLocation</param-name>

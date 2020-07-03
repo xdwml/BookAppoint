@@ -15,16 +15,9 @@ public interface AppointmentService {
     Appointment selectByStudentId(long studentId);
     //通过一个学生ID查询已经预约了哪些书。
     List<Appointment> findAllByStudentId(long studentId);
-
-
-    /*
-     * 查看某学生预约的所有图书
-     *
-     *//*
-    List<Appointment> getAppointByStu(long studentId);
     //通过图书id和学号预约图书
-    public void BookAppoint(Appointment appointment);
+    public void BorrowBook(Appointment appointment);
     //通过图书id归还图书
-    public void ReplyBook(long bookId,long studentId);*/
+    public void ReplyBook(long bookId,long studentId);
 
 }

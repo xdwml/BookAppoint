@@ -1,7 +1,6 @@
 package edu.xidian.appoint.mapper;
 
 import edu.xidian.appoint.model.Appointment;
-import edu.xidian.appoint.model.AppointmentKey;
 import java.util.List;
 
 public interface AppointmentMapper {
