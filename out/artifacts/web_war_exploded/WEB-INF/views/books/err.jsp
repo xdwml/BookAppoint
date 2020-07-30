@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--要遍历显示，要导入jstl的包,使用EL表达式--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>
@@ -19,7 +18,7 @@
             <h2 class="text-danger">
                 <!--用来展示预约控件-->
                 <span class="glyphicon"  >
-                    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/books/list.do">继续预约</a>
+                    <a class="btn btn-primary btn-lg" href="${pageContext.request.contextPath}/books/list.do">继续</a>
                 </span> <!--在js里面调用这个id还可以动态显示一些其他东西，例如动态时间等（需要插件）-->
 
             </h2>

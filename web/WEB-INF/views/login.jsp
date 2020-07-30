@@ -1,10 +1,3 @@
-<%--
-  Created by IntelliJ IDEA.
-  User: 001
-  Date: 2020/6/5
-  Time: 22:08
-  To change this template use File | Settings | File Templates.
---%>
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <html>
 <head>
@@ -33,6 +26,9 @@
                     <div style="height: 80px;">
                         <h3 style="text-align: center;color: darkolivegreen; font-size: 35px;">欢迎登录</h3>
                     </div>
+                    <div>
+                        ${msg}
+                    </div>
                     <label>学号</label>
                     <div  class="form-group">
                     <input type="text" name="username" class="form-control uname" placeholder="请输入您的学号"/>
@@ -41,12 +37,6 @@
                     <div  class="form-group">
                         <input type="text" name="password" class="form-control pword" placeholder="请输入您的密码"/>
                     </div>
-                    <%
-                        String cookieName="user";
-                        Cookie cookie=new Cookie(cookieName,"username");
-                        cookie.setMaxAge(60);//存活期1分钟
-                        response.addCookie(cookie);
-                    %>
                     <div class="submit">
                         <button type="submit" class="btn btn-lg  btn-login btn-block" style="background-color: darkturquoise;">登录</button>
                     </div>
@@ -55,10 +45,5 @@
         </div>
     </div>
 </div>
-    <%--<form id="loginFrom" action="${pageContext.request.contextPath}/login.do" method="post">
-        <input type="text" name="username"><br>
-        <input type="text" name="password"><br>
-        <input type="submit" value="登录"><br>
-    </form>--%>
 </body>
 </html>

@@ -34,12 +34,12 @@
         <property name="basePackage" value="edu.xidian.appoint.mapper"/>
         <property name="sqlSessionFactoryBeanName" value="sqlSessionFactoryBean"/>
     </bean>
-    <!-- 配置扫描注解 自动扫描service-->
+    <!--5.配置扫描注解 自动扫描service-->
     <context:component-scan base-package="edu.xidian.appoint"/>
-    <!-- 5.配置事务管理器 -->
+    <!-- 6.配置事务管理器 -->
     <bean id="transactionManager" class="org.springframework.jdbc.datasource.DataSourceTransactionManager">
         <property name="dataSource" ref="dataSource"/>
     </bean>
-    <!-- 6.开启事务注解-->
+    <!-- 7.开启事务注解-->
     <tx:annotation-driven transaction-manager="transactionManager"/>
 </beans>

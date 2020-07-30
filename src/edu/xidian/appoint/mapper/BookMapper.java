@@ -17,7 +17,6 @@ public interface BookMapper {
     Book selectByPrimaryKey(Long bookId);
     int deleteByPrimaryKey(Long bookId);
     int insertByBook(Book record);
-
     int updateByPrimaryKeySelective(Book record);
 
 }

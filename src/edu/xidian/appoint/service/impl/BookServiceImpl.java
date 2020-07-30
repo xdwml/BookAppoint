@@ -10,7 +10,7 @@ import java.util.List;
 @Service
 @Transactional
 public class BookServiceImpl implements BookService {
-    @Autowired
+    @Autowired//由Spring容器来注入
     private BookMapper bookMapper;//自动注入dao,mapper就是dao
     @Override
     public List<Book> findAllBooks() {

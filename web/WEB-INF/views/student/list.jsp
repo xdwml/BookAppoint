@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" language="java" %>
 <%--要遍历显示，要导入jstl的包,使用EL表达式--%>
 <%@ taglib prefix="c" uri="http://java.sun.com/jsp/jstl/core" %>

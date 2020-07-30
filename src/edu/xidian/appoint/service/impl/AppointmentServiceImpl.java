@@ -66,7 +66,6 @@ public class AppointmentServiceImpl implements AppointmentService {
     public int selectByBookIdAndStudentId(long bookId, long studentId) {
         return appointmentMapper.selectByBookIdAndStudentId(bookId,studentId);
     }
-
     @Override
     public Appointment selectByBookId(long bookId) {
         return appointmentMapper.selectByBookId(bookId);

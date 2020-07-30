@@ -40,7 +40,8 @@ public class AppointmentController {
         appointService.BorrowBook(appointment);
         //4.将数据返回视图层显示，转发给预约图书页面
         model.addAttribute("appointment", appointment);
-        return "forward:appoint.do";
+        //return "forward:appoint.do";//可以转发
+        return "redirect:appoint.do";//重定向，先转发，在重定向
     }
     //用户：查询已借阅
     @RequestMapping("/appoint")
@@ -67,8 +68,8 @@ public class AppointmentController {
         //2.归还图书
         appointService.ReplyBook(id,user.getStudentId());
         System.out.println("归还成功！");
-        return "forward:appoint.do";
-
+        //return "forward:appoint.do";//可以转发
+        return "redirect:appoint.do";//重定向，先转发，在重定向
     }
     @RequestMapping("exit")
     public String exit(HttpServletRequest request) {

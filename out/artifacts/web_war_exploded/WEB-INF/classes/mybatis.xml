@@ -15,5 +15,4 @@
         <package name="edu.xidian.appoint.mapper"></package>
     </mappers>
     <!-- 配置全局属性 -->
-
 </configuration>
